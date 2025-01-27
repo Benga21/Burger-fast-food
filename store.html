@@ -1,0 +1,268 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Heaven - Visit Our Store</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/a4/6d/dc/a46ddcf4e1684ffff6a19abd5e0a9f8a.jpg'); /* Add your background image URL here */
+            background-size: cover;
+            background-position: center center;
+            background-repeat: no-repeat;
+            color: #0bbcf1fa;
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background-color: rgba(79, 216, 66, 0.918);
+            padding: 20px;
+            text-align: center;
+        }
+
+        h1 {
+            margin: 0;
+            color: rgba(223, 36, 36, 0.932);
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 10px;
+        }
+
+        nav ul li a {
+            color: rgba(221, 21, 21, 0.87);
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        #store {
+            padding: 40px;
+            text-align: center;
+        }
+
+        .burger-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            margin-top: 20px;
+        }
+
+        .burger {
+            background-color: rgba(255, 255, 255, 0.8);
+            padding: 20px;
+            border-radius: 10px;
+            box-shadow: 0px 4px 10px rgba(0, 0, 0, 0.1);
+        }
+
+        .burger img {
+            width: 100%;
+            border-radius: 8px;
+        }
+
+        h3 {
+            margin: 10px 0;
+        }
+
+        .add-to-cart {
+            background-color: #ff6600;
+            color: rgba(14, 11, 1, 0.925);
+            border: none;
+            padding: 10px;
+            cursor: pointer;
+            border-radius: 5px;
+            font-size: 16px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #ff4500;
+        }
+
+        footer {
+            background-color: rgba(8, 8, 0, 0.904);
+            color: rgba(236, 226, 226, 0.952);
+            text-align: center;
+            padding: 20px;
+            position: fixed;
+            width: 100%;
+            bottom: 0;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Burger fast food</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="cart.html">Cart</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="store">
+        <h2>Visit Our Store</h2>
+        <p>Come visit us at:</p>
+        <p>123 Burger Lane, Food City, FC 12345</p>
+        <p>We are open from 10 AM to 10 PM every day!</p>
+
+        <h3>OUR CRISPY FAST FOODS</h3>
+        <div class="burger-grid">
+            <!-- 20 Burger Items -->
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/e6/00/fc/e600fcb4cf576c947cd3d22167e68796.jpg" alt="McDonald's Chicken Nuggets">
+                <h3>McDonald's Chicken Nuggets</h3>
+                <p>These delicious McDonald's chicken nuggets are the ultimate dupe to your favorite fast-food chicken nuggets!.</p>
+                <span>$8.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://mytastefulrecipes.com/wp-content/uploads/2024/10/pinteresto_43490_Hot_Cheeto_Mozzarella_Sticks_photo_from_Reddit_998e372c-b535-484e-912f-236b9afc7b9e.png" alt="Hot Cheeto Mozzarella Sticks">
+                <h3>Hot Cheeto Mozzarella Sticks</h3>
+                <p>Classic burger topped with melted cheddar cheese.</p>
+                <span>$9.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/b0/62/85/b062858d9c7e5f66f5f4d346345f1c50.jpg" alt="Mozzarella sticks onion rings ">
+                <h3>Mozzarella sticks onion rings</h3>
+                <p>Mozzarella Stick Onion Rings, a delicious fusion of cheese and crispy onion..</p>
+                <span>$10.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/03/1d/03/031d03ad7dcd51e1672cdc6db3bf9aad.jpg" alt="Honey chilli paner">
+                <h3>Honey chilli paner</h3>
+                <p>sticky sauce composed of honey, chili sauce, and aromatic spices, crispy cubes of paneer.</p>
+                <span>$7.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/7c/d7/6a/7cd76a756edc24d7c840283fdbfea9a9.jpg" alt="Roasted chicken with garlic and herbs">
+                <h3>Roasted chicken with garlic and herbs</h3>
+                <p>roasted chicken is coated in a garlic and herb butter, then cooked to golden brown perfection. Tender and juicy every time!.</p>
+                <span>$11.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/c9/8d/74/c98d749fe49d9dcc19542a91781c9894.jpg" alt="cold sprite">
+                <h3>Cold sprite</h3>
+                <span>$10.49</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/2a/96/b7/2a96b73085f5390902295fee8a8fee37.jpg" alt="REFRIGERANTE 7 UP">
+                <h3>REFRIGERANTE 7 UP</h3>
+                <p>🍋 Delicioso e super refrescante refrigerante .</p>
+                <span>$12.49</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://mir-s3-cdn-cf.behance.net/project_modules/source/295f46168904645.6442c3f1a2ac6.png" alt="PEPSI 3D BLENDER">
+                <h3>PEPSI 3D BLENDER</h3>
+                <p>crispy.</p>
+                <span>$11.49</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/f6/4e/da/f64eda9991d501ee41681dbae87f5407.jpg" alt="Heineken">
+                <h3>Heineken</h3>
+                <p>frosted Heineken beer.</p>
+                <span>$23.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/a9/8a/80/a98a80e04d0222529518283862bdb5cd.jpg" alt="Chivas Regal">
+                <h3>Chivas Regal</h3>
+                <p>Chivas Regal 12-Year-Old Blended Scotch Whisky.</p>
+                <span>$112.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/10/7f/d6/107fd62275eb39621aeeb5d93e36ee31.jpg" alt="Jack Daniels">
+                <h3>Jack Daniels</h3>
+                <p>Crispy and smooth Jack Daniels.</p>
+                <span>$111.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/7c/55/83/7c55833d8b7f4cbcf852a1f4e0e1dd07.jpg" alt="Johnnie Walker Blue Label">
+                <h3>Johnnie Walker Blue Label</h3>
+                <p>premium blended Scotch whisky.</p>
+                <span>$500</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/8e/58/d7/8e58d78d7e91ce90dce28b9311ef8dde.jpg" alt="Tandoori chicken skewers">
+                <h3>Tandoori chicken skewer</h3>
+                <p>Roasted skewers</p>
+                <span>$12.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/91/c4/7a/91c47a7663f464a7b46f16d0def806d3.jpg" alt="Kerala-style roast chicken">
+                <h3>Kerala-style roast chicken</h3>
+                <p>Kerala-style chicken roast is the ultimate comfort food.</p>
+                <span>$409</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/b1/4e/96/b14e967be4d2d4d121ec19d6de13ea7c.jpg" alt="Cheesy BBQ Chicken Pizza">
+                <h3>Cheesy BBQ Chicken Pizza</h3>
+                <p>Slathered with BBQ sauce and sprinkled with tons of mozzarella.</p>
+                <span>$131.49</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://www.aberdeenskitchen.com/wp-content/uploads/2021/02/Thai-Chicken-Pizza-3.jpg" alt="Thai Chicken Pizza">
+                <h3>Thai Chicken Pizza</h3>
+                <p>Thai chicken pizza.</p>
+                <span>$10.49</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/236x/41/7d/b9/417db9d1253078b103ed10a712b735d0.jpg" alt="Pad Thai">
+                <h3>Pad Thai</h3>
+                <p>A stir-fried noodle dish made with rice noodles, shrimp or chicken, egg, tofu, bean sprouts, and crushed peanuts, flavored with tamarind sauce and lime.</p>
+                <span>$20.00</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/c9/e7/18/c9e718b9999e692cf5af1bb4652b2bc0.jpg" alt="Gai Tod Thai Fried Chicken">
+                <h3>Gai Tod Thai Fried Chicken</h3>
+                <p>A crispy, golden-brown coating that's seasoned with amazing flavors.</p>
+                <span>$13.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/f6/a6/d6/f6a6d61ae1dc7231677b3526f2139bb3.jpg" alt="Pad Kra Pao (ผัดกะเพรา)">
+                <h3>Pad Kra Pao (ผัดกะเพรา)</h3>
+                <p>Minced meat (usually chicken, pork, or beef) stir-fried with Thai basil, garlic, and chili, often served with rice and a fried egg on top.</p>
+                <span>$100.00</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+            <div class="burger">
+                <img src="https://i.postimg.cc/gkXdrjZ4/chilli-sause.jpg" alt="Chili Sauce">
+                <h3>Chili Sauce</h3>
+                <p>Chili sauce fresh from the manufacturer.</p>
+                <span>$10.99</span>
+                <button class="add-to-cart">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Burger fast food. All rights reserved.</p>
+    </footer>
+</body>
+</html>

@@ -1,0 +1,261 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Heaven - Menu</title>
+    <style>
+        /* General body background */
+        body {
+            background-image: url('https://i.pinimg.com/736x/91/29/63/9129634ceebe6978b2e4b96833c38cef.jpg');  /* Replace with your image URL */
+            background-size: cover;  /* Ensure the background image covers the entire page */
+            background-position: center center;  /* Center the image */
+            background-attachment: fixed;  /* Make the background fixed when scrolling */
+            margin: 0;
+            font-family: Arial, sans-serif;
+        }
+
+        /* General header styles */
+        header {
+            background-color: #333;
+            color: white;
+            padding: 10px 0;
+            text-align: center;
+        }
+
+        /* Navigation menu styles */
+        header nav ul {
+            list-style: none;
+            padding: 0;
+            display: flex;
+            justify-content: center;
+            gap: 15px;
+        }
+
+        header nav ul li {
+            display: inline;
+        }
+
+        header nav ul li a {
+            color: white;
+            text-decoration: none;
+            font-weight: bold;
+            transition: color 0.3s ease;
+        }
+
+        header nav ul li a:hover {
+            color: #ff5722;
+        }
+
+        /* Media query for responsive design */
+        @media (max-width: 768px) {
+            header nav ul {
+                flex-direction: column;  /* Stack the links vertically */
+                display: none;  /* Hide the navigation links by default */
+                width: 100%;
+            }
+
+            header nav.active ul {
+                display: flex;  /* Show the menu when it's active */
+            }
+
+            header nav ul li {
+                text-align: center;  /* Center the links when stacked */
+                padding: 10px 0;
+            }
+
+            /* Hamburger icon for mobile view */
+            .hamburger {
+                display: block;
+                cursor: pointer;
+                font-size: 30px;
+                color: white;
+                padding: 10px;
+            }
+        }
+
+        /* Menu section styles */
+        #menu {
+            padding: 20px;
+            text-align: center;
+        }
+
+        .burger-grid {
+            display: grid;
+            grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+            gap: 20px;
+            justify-items: center;
+        }
+
+        .burger {
+            border: 1px solid #ddd;
+            padding: 20px;
+            background-color: #f4f4f4;
+            text-align: center;
+            border-radius: 8px;
+        }
+
+        .burger img {
+            width: 100%;
+            height: auto;
+            border-radius: 8px;
+        }
+
+        .burger h3 {
+            margin: 10px 0;
+        }
+
+        .burger span {
+            font-weight: bold;
+            color: #ff5722;
+        }
+
+        .add-to-cart {
+            margin-top: 10px;
+            background-color: #ff5722;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            font-weight: bold;
+            border-radius: 5px;
+        }
+
+        .add-to-cart:hover {
+            background-color: #e64a19;
+        }
+
+        footer {
+            text-align: center;
+            margin-top: 30px;
+            padding: 10px;
+            background-color: #333;
+            color: white;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Burger Fast Food</h1>
+        <nav>
+            <div class="hamburger" onclick="toggleMenu()">&#9776;</div>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="store.html">Visit Our Store</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="menu">
+        <h2>Our Menu</h2>
+        <div class="burger-grid">
+            <!-- Classic Burger -->
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/22/29/0d/22290dcfd246cc18d795fe19750e6e68.jpg" alt="Classic Burger">
+                <h3>Classic Burger</h3>
+                <p>Juicy beef patty with lettuce, tomato, and our special sauce.</p>
+                <span>$8.99</span>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <!-- Cheese Burger -->
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/09/94/c8/0994c8dc442a96fdc96bffe76aaca047.jpg" alt="Cheese Burger">
+                <h3>Cheese Burger</h3>
+                <p>Classic burger topped with melted cheese.</p>
+                <span>$9.99</span>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <!-- Bacon Burger -->
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/a1/49/d6/a149d65a3aec91d437375dee87f34952.jpg" alt="Bacon Burger">
+                <h3>Bacon Burger</h3>
+                <p>Delicious burger with crispy bacon and cheese.</p>
+                <span>$10.99</span>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <!-- Veggie Burger -->
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/46/c4/08/46c408fd69c74b2e44dced39bed26411.jpg" alt="Veggie Burger">
+                <h3>Veggie Burger</h3>
+                <p>A delicious plant-based burger with fresh veggies.</p>
+                <span>$7.99</span>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <!-- Smash Burger -->
+            <div class="burger">
+                <img src="https://i.pinimg.com/236x/ac/65/7b/ac657b4b83d1dfb3f62bf1ecde3c2ae6.jpg" alt="Smash Burger">
+                <h3>Smash Burger</h3>
+                <p>Thin, crispy beef patty smashed on a griddle served with simple toppings.</p>
+                <span>$20.99</span>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <!-- Chicken Burger -->
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/8f/c2/75/8fc275b227ef160a85202807dc646f11.jpg" alt="Chicken Burger">
+                <h3>Chicken Burger</h3>
+                <p>Crispy Buffalo Chicken Burgers with Ranch Slaw. Crispy golden fried chicken pieces dunked and soaked in a buttery buffalo sauce.</p>
+                <span>$40.99</span>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <!-- Double/Triple Burger -->
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/eb/1a/3a/eb1a3a183a38099c33651af09b0ef134.jpg" alt="Double/Triple Burger">
+                <h3>Double/Triple Burger</h3>
+                <p>Multiple beef patties stacked with toppings.</p>
+                <span>$70.99</span>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+
+            <!-- BBQ Burger -->
+            <div class="burger">
+                <img src="https://i.pinimg.com/736x/1d/e3/4a/1de34a2061035069754e4b1ced94993d.jpg" alt="BBQ Burger">
+                <h3>BBQ Burger</h3>
+                <p>Beef patty with barbecue sauce, onion rings, and cheddar cheese.</p>
+                <span>$40.99</span>
+                <button class="add-to-cart" onclick="addToCart()">Add to Cart</button>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Burger Heaven. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Get the cart count element
+        const cartCountElement = document.getElementById('cart-count');
+
+        // Update the cart count from localStorage
+        function updateCartCount() {
+            const cartCount = localStorage.getItem('cartCount') || 0;
+            cartCountElement.textContent = cartCount;
+        }
+
+        // Add an item to the cart
+        function addToCart() {
+            let cartCount = parseInt(localStorage.getItem('cartCount') || '0');
+            cartCount++;
+            localStorage.setItem('cartCount', cartCount);
+            updateCartCount();
+        }
+
+        // Initialize cart count on page load
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+
+        // Toggle menu function for the hamburger icon
+        function toggleMenu() {
+            const nav = document.querySelector('header nav');
+            nav.classList.toggle('active');  // Toggle 'active' class on the nav element
+        }
+    </script>
+</body>
+</html>

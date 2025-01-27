@@ -1,0 +1,62 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="Burger fast food - Delicious and fast meals for all your cravings. Visit us for burgers, fries, drinks, and more!">
+    <meta name="keywords" content="burger, fast food, fries, drinks, quick meals, delicious food">
+    <title>Burger Fast Food - Home</title>
+    <link rel="stylesheet" href="styles.css">
+</head>
+<body>
+    <header>
+        <h1>Burger Fast Food</h1>
+        <nav>
+            <ul>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="store.html">Visit Our Store</a></li>
+                <li><a href="cart.html">Cart (<span id="cart-count">0</span>)</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="hero">
+        <video autoplay muted loop>
+            <source src="https://www.shutterstock.com/shutterstock/videos/1017321826/preview/stock-footage-broiler-chickens-roasted-chickens.webm" type="video/mp4">
+            <img src="https://i.pinimg.com/736x/36/df/19/36df19f2e2a807957886499c8ded5d11.jpg" alt="Welcome to Burger Fast Food!">
+        </video>
+        <div class="hero-text">
+            <h2>Welcome to Burger Fast Food!</h2>
+            <p>Your favorite place for delicious fast foods.</p>
+            <a href="menu.html" class="btn">View Menu</a>
+        </div>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Burger Fast Food. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Cart Functionality
+        const cartCountElement = document.getElementById('cart-count');
+
+        // Simulating cart functionality with localStorage
+        function updateCartCount() {
+            const cartCount = localStorage.getItem('cartCount') || 0;
+            cartCountElement.textContent = cartCount;
+        }
+
+        function addToCart() {
+            let cartCount = parseInt(localStorage.getItem('cartCount') || '0');
+            cartCount++;
+            localStorage.setItem('cartCount', cartCount);
+            updateCartCount();
+        }
+
+        // Initialize cart count on page load
+        document.addEventListener('DOMContentLoaded', updateCartCount);
+    </script>
+</body>
+</html>

@@ -1,0 +1,143 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Burger Fast Food - Cart</title>
+    <style>
+        body {
+            background-image: url('https://i.pinimg.com/736x/ad/8a/97/ad8a9710582fc76d9cb7981799604cab.jpg'); /* Replace with your image path */
+            background-size: 150%; /* Zoom out the background image */
+            background-position: center;
+            background-attachment: fixed;
+            margin: 0;
+            font-family: Arial, sans-serif;
+            animation: zoomOut 10s infinite; /* Apply zoom-out animation */
+        }
+
+        @keyframes zoomOut {
+            0% {
+                background-size: 150%;
+            }
+            100% {
+                background-size: 100%;
+            }
+        }
+
+        header {
+            background-color: rgba(0, 0, 0, 0.6); /* Optional: To make header text more readable on the background */
+            padding: 20px;
+            color: white;
+            text-align: center;
+        }
+
+        nav ul {
+            list-style-type: none;
+            padding: 0;
+        }
+
+        nav ul li {
+            display: inline;
+            margin: 0 15px;
+        }
+
+        nav ul li a {
+            color: white;
+            text-decoration: none;
+        }
+
+        #cart {
+            padding: 20px;
+            text-align: center;
+            background-color: rgba(255, 255, 255, 0.8); /* Optional: To add a slightly transparent background to the cart */
+            margin-top: 20px;
+        }
+
+        footer {
+            background-color: rgba(0, 0, 0, 0.6); /* Optional: To match header styling */
+            text-align: center;
+            padding: 10px;
+            color: white;
+        }
+
+        .cart-item img {
+            width: 50px;
+            height: 50px;
+            margin-right: 10px;
+        }
+
+        .checkout {
+            background-color: #f44336;
+            color: white;
+            padding: 10px 20px;
+            border: none;
+            cursor: pointer;
+            margin-top: 20px;
+        }
+
+        .checkout:hover {
+            background-color: #d32f2f;
+        }
+    </style>
+</head>
+<body>
+    <header>
+        <h1>Burger Fast Food</h1>
+        <nav>
+            <ul>
+                <li><a href="index.html">Home</a></li>
+                <li><a href="menu.html">Menu</a></li>
+                <li><a href="about.html">About Us</a></li>
+                <li><a href="contact.html">Contact</a></li>
+                <li><a href="store.html">Visit Our Store</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="cart">
+        <h2>Your Cart</h2>
+        <div id="cart-items"></div>
+        <p id="empty-cart-message">No items in your cart yet.</p>
+        <button class="checkout">Checkout</button>
+        <p><a href="menu.html">Go back to Menu</a> to add more items!</p>
+    </section>
+
+    <footer>
+        <p>&copy; 2023 Burger Fast Food. All rights reserved.</p>
+    </footer>
+
+    <script>
+        // Function to display items in the cart
+        function displayCart() {
+            const cart = JSON.parse(localStorage.getItem('cart')) || [];
+            const cartItemsContainer = document.getElementById('cart-items');
+            const emptyCartMessage = document.getElementById('empty-cart-message');
+            
+            // If the cart is empty, show the message
+            if (cart.length === 0) {
+                emptyCartMessage.style.display = 'block';
+            } else {
+                emptyCartMessage.style.display = 'none';
+                
+                // Clear previous items
+                cartItemsContainer.innerHTML = '';
+                
+                // Loop through the cart and display each item
+                cart.forEach(item => {
+                    const itemDiv = document.createElement('div');
+                    itemDiv.classList.add('cart-item');
+                    itemDiv.innerHTML = `
+                        <img src="${item.image}" alt="${item.name}">
+                        <h3>${item.name}</h3>
+                        <p>$${item.price}</p>
+                    `;
+                    cartItemsContainer.appendChild(itemDiv);
+                });
+            }
+        }
+
+        // Initialize cart display on page load
+        document.addEventListener('DOMContentLoaded', displayCart);
+    </script>
+</body>
+</html>
